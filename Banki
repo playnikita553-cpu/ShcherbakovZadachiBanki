@@ -1,0 +1,40 @@
+import kotlin.random.Random
+
+fun printArray(mas: Array<Double>)
+{
+    for (i in 0..<mas.size)
+    {
+        println("Банк ${i + 1}: ${mas[i]} ₽")
+    }
+}
+
+fun main()
+{
+
+    var massiv = Array(5) { Random.nextDouble(90.0, 105.0) }
+
+    println("Курсы банков:")
+    printArray(massiv)
+
+
+    var maxIndex = 0
+    for (i in 1..<massiv.size)
+    {
+        if (massiv[i] > massiv[maxIndex])
+        {
+
+            maxIndex = i
+            
+        }
+
+    }
+
+    println("\nЛучший банк для обмена: Банк ${maxIndex + 1}")
+
+
+
+
+
+
+
+}
