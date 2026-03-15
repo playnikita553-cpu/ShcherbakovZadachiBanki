@@ -1,0 +1,31 @@
+import kotlin.random.Random
+fun main() {
+    println("Введите на какой высоте находилась улитка в см, а затем введите высоту дерева в метрах: ")
+    var ulitkanadereve = readln().toInt()
+    val visotadereva = readln().toInt()
+    var pogoda = arrayOf("Солнечная", "Пасмурная")
+    var randomPogoda = pogoda.random()
+    for(i in 1..7)
+    {
+        var randomPogoda = pogoda.random()
+        if(randomPogoda == "Солнечная")
+        {
+            ulitkanadereve += 2
+        }
+        else
+            if(randomPogoda == "Пасмурная")
+            {
+                ulitkanadereve -= 1
+            }
+
+
+
+
+
+
+    }
+
+    println("Погода к концу недели - $randomPogoda")
+println("Местоположение улитки в см к концу недели - $ulitkanadereve")
+
+}
