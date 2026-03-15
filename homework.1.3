@@ -1,0 +1,21 @@
+fun main()
+{
+
+println("Введите возраст: ")
+println("Введите ваш пол: ")
+var age = readln().toInt()
+    var pol = readln()
+    if(age < 7) println("Школьник")
+    if((age >= 7) and (age <= 21)) println("Учащийся")
+    if((age >= 23) and (age < 55)) println("Работающий")
+    if((age >= 55) and (pol == "Женщина") or (age >= 55) and (pol == "женщина") ) println("пенсионер")
+    if((age >= 55) and (age <60) and (pol == "Мужчина") or (age >= 55) and (age <60) and (pol == "мужчина")) println("Работающий")
+    if((age >= 60)) println("Пенсионер")
+
+
+
+
+
+
+
+}
