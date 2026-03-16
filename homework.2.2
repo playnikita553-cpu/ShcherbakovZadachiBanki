@@ -1,0 +1,90 @@
+import kotlin.random.Random
+fun main()
+{
+    println("Введите кол-во учеников: ")
+    var kolvoUchenikov = readln().toInt()
+    var rost = IntArray(kolvoUchenikov)
+    for (i in 0..<rost.size) rost[i] = Random.nextInt(150, 210)
+
+    val sredni = sredniyRost(rost)
+
+
+    
+    val visokiyrosst = visokiyRost(rost)
+    
+    val niskirosst = niskyRost(rost)
+    
+    val igroki = IgrokiBasketa(rost)
+    
+    println("Средний рост: $sredni")
+
+    
+    println("Максимальный рост: $visokiyrosst")
+
+
+    
+    println("Минимальный рост: $niskirosst")
+
+
+    
+    println("Кол-во баскетболистов: $igroki")
+
+    }
+
+
+fun sredniyRost(mas: IntArray): Double
+{
+    if(mas.isEmpty()) return 0.0
+    var sum = 0.0
+    for(j in mas)
+    {
+        sum += j
+
+    }
+    return sum / mas.size
+}
+fun visokiyRost(mas: IntArray): Int
+{
+
+    if(mas.isEmpty()) return 0
+    var max = mas[0]
+    for(j in mas)
+    {
+        if(j > max) max = j
+
+
+
+
+    }
+    return max
+
+
+
+}
+fun niskyRost(mas: IntArray): Int
+{
+    if(mas.isEmpty()) return 0
+    var min = mas[0]
+    for(j in mas)
+    {
+        if(j < min) min = j
+    }
+    return min
+
+
+}
+
+fun IgrokiBasketa(mas: IntArray): Int
+{
+    var count = 0
+    for(j in mas)
+    {
+    if(j > 170) count++
+
+    }
+    return count
+
+
+
+
+}
